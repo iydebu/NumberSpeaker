@@ -25,7 +25,11 @@ def number_word(num, word=""):
         word += numteenW[num-10]
         return word
     elif (num < 100):
-        word += numtyW[int(num/10)-2]+numsinW[num % 10-1]
+        if(num % 10 == 0):
+            word += numtyW[int(num/10)-2]
+            return word
+        else:
+             word += numtyW[int(num/10)-2]+numsinW[num % 10-1]
         return word
     for i in reversed(range(0, len(numN))):
         if (num >= int(numN[i])):
