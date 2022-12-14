@@ -1,5 +1,3 @@
-from multiprocessing.connection import wait
-from time import sleep
 import pyttsx3
 import tkinter as tk
 from PIL import ImageTk, Image
