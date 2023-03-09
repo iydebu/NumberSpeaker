@@ -16,23 +16,23 @@ numN = ["100", "1000", "1000000", "1000000000",
 
 
 def number_word(num, word=""):
-    if (num == 0):
+    if num == 0:
         return word
-    elif (num < 10):
+    elif num < 10:
         word += numsinW[num-1]
         return word
-    elif (num < 20):
+    elif num < 20:
         word += numteenW[num-10]
         return word
-    elif (num < 100):
-        if(num % 10 == 0):
+    elif num < 100:
+        if num % 10 == 0:
             word += numtyW[int(num/10)-2]
             return word
         else:
              word += numtyW[int(num/10)-2]+numsinW[num % 10-1]
         return word
     for i in reversed(range(0, len(numN))):
-        if (num >= int(numN[i])):
+        if num >= int(numN[i]):
             word += number_word(int(num/int(numN[i])))
             word += numW[i]
             word += number_word(num % int(numN[i]))
