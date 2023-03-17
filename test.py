@@ -2,7 +2,7 @@ from multiprocessing.connection import wait
 from time import sleep
 import pyttsx3
 import tkinter as tk
-from PIL import ImageTk, Image
+
 numsinW = ["one ", "two ", "three ", "four ",
            "five ", "six ", "seven ", "eight ", "nine "]
 numteenW = ["ten ", "eleven ", "twelve ", "thirteen ", "fourteen ",
@@ -57,9 +57,8 @@ def speak():
 
 
 root = tk.Tk()
-ico = ImageTk.PhotoImage(Image.open(
-    r"C:\\Users\\debut\\OneDrive\\Documents\\Mega\\Programming\\python\\NumberSpeak\\coding.png").resize((200, 200)))
-root.wm_iconphoto(False, ico)
+
+
 root.resizable(0, 0)
 
 root.title("Number to Word")
@@ -70,10 +69,9 @@ frame = tk.Frame(root, width=400, height=400, bg="#3d6466")
 frame.grid(row=0, column=0)
 frame.pack_propagate(False)
 
-img = ImageTk.PhotoImage(Image.open(
-    r"C:\\Users\\debut\\OneDrive\\Documents\\Mega\\Programming\\python\\NumberSpeak\\logo.png").resize((200, 200)))
-logo = tk.Label(frame, image=img, bg="#3d6466")
-logo.pack()
+
+
+
 
 number_label = tk.Label(frame, text="Enter a number", bg="#3d6466",
                         fg="white", font=('Nunito', 20, "bold")).pack()
